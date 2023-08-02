@@ -1,33 +1,53 @@
-body{
-    background-color: gray;
+body {
     font-family: Arial, Helvetica, sans-serif;
-}
-.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-}
-h3{
-    font-weight: bold;
+    background-color: #CCD3DC;
+    padding: 1rem;
+  }
+  h3{
+    font-size: 30px;
+  }
+  p{
+    color: #5C6982;
     font-size: 20px;
-}  
-p{
-    margin-right: 20px;
-    padding-top: 5px;
-    text-align: justify;
-    color: rgb(75, 68, 68);
-}
-.tabcontent{
-    padding-left: 20px;
-    border-style: solid;
-    border-color: transparent;
-    background-color: whitesmoke;
-}
+  }
+  .tabs-component .tabs-button-wrapper {
+    display: flex;
+  }
+  
+  .tabs-component .tabs-button-wrapper .tab-button {
+    background-color: white;
+    padding: 1rem;
+    border-right: 1px solid #5C6982;
+    border-left: 1px solid #5C6982;
+    cursor: pointer;
+  }
+  
+  .tabs-component .tabs-button-wrapper .tab-button.active {
+    font-weight: bold;
+    color: black;
+    box-shadow: 0 2px 0 -1px white;
+  }
+  
+  .tabs-component .tabs-button-wrapper .tab-button:first-child {
+    border-radius: 8px 0 0 0; //border-radius: top right bottom left
+  }
+  
+  .tabs-component .tabs-button-wrapper .tab-button:last-child {
+    border-radius: 0 8px 0 0; //border-radius: top right bottom left
+  }
+  
+  .tabs-content-wrapper {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0 8px 8px 8px;
+    border: 1px solid transparent;
+  }
+  
+  .tabs-content-wrapper .tab-content {
+    margin-bottom: 1rem;
+    display: none;
+  }
+  
+  .tabs-content-wrapper .tab-content.active {
+    display: block;
+  }
